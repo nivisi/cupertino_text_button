@@ -4,7 +4,7 @@
 
 A button that looks like a Cupertino text button!
 
-<img src="../readme/CupertinoTextButtonExample.gif">
+<img src="/readme/CupertinoTextButtonExample.gif">
 
 ### Text Button
 
@@ -111,5 +111,6 @@ If these properties are not specified in the button and no theme is provided, fa
 
 \* Theme — the default Flutter Theme.
 
+[code-factor--badge-url]: https://www.codefactor.io/repository/github/nivisi/cupertino_text_button/badge?s=decf81989732c918fe71190d5afd2637c02e1816
 [code-factor-app-url]: https://www.codefactor.io/repository/github/nivisi/cupertino_text_button
 [app-version-img]: https://img.shields.io/badge/version-0.0.1-blue
