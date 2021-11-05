@@ -1,7 +1,8 @@
 name: cupertino_text_button
 description: Buttons that look like cupertino ones.
 version: 0.0.1
-homepage:
+homepage: https://github.com/nivisi/cupertino_text_button
+repository: https://github.com/nivisi/cupertino_text_button
 
 environment:
   sdk: ">=2.12.0 <3.0.0"
