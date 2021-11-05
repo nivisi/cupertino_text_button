@@ -1,8 +1,9 @@
 part of '../cupertino_text_button.dart';
 
 Color _getNormalColor(CupertinoTextButton widget, BuildContext context) {
-  if (widget.normalColor != null) {
-    return widget.normalColor!;
+  final widgetNormalColor = widget.normalColor;
+  if (widgetNormalColor != null) {
+    return widgetNormalColor;
   }
 
   final cupertinoTextButtonTheme = CupertinoTextButtonTheme.of(context);
@@ -11,14 +12,15 @@ Color _getNormalColor(CupertinoTextButton widget, BuildContext context) {
 }
 
 Color _getPressedColor(CupertinoTextButton widget, BuildContext context) {
-  if (widget.pressedColor != null) {
-    return widget.pressedColor!;
+  final widgetPressedColor = widget.normalColor;
+  if (widgetPressedColor != null) {
+    return widgetPressedColor;
   }
 
   final cupertinoTextButtonTheme = CupertinoTextButtonTheme.of(context);
-
-  if (cupertinoTextButtonTheme?.pressedColor != null) {
-    return cupertinoTextButtonTheme!.pressedColor!;
+  final themePressedColor = cupertinoTextButtonTheme?.pressedColor;
+  if (themePressedColor != null) {
+    return themePressedColor;
   }
 
   return Theme.of(context).primaryColor;
@@ -48,8 +50,9 @@ Duration _getBackwardDuration(
 }
 
 Curve _getCurve(CupertinoTextButton widget, BuildContext context) {
-  if (widget.curve != null) {
-    return widget.curve!;
+  final widgetCurve = widget.curve;
+  if (widgetCurve != null) {
+    return widgetCurve;
   }
 
   final cupertinoTextButtonTheme = CupertinoTextButtonTheme.of(context);
