@@ -4,7 +4,7 @@
 
 A button that looks like a Cupertino text button!
 
-<img src="/readme/CupertinoTextButtonExample.gif">
+![example](readme/CupertinoTextButtonExample.gif)
 
 ### Text Button
 
