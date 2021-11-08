@@ -1,6 +1,6 @@
-# Cupertino Text Button 
+# Cupertino Text Button [![pub version][pub-version-img]][pub-version-url]
 
-[![pub version][pub-version-img]][pub-version-url] [![CodeFactor][code-factor--badge-url]][code-factor-app-url]
+[![CodeFactor][code-factor--badge-url]][code-factor-app-url]
 
 A button that looks like a Cupertino text button!
 
