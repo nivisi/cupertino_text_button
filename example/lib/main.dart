@@ -104,7 +104,7 @@ class _MyHomePageState extends State<MyHomePage> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  CupertinoTextButton.materialIcon(
+                  CupertinoTextButton.icon(
                     icon: Icons.add,
                     size: 50,
                     onTap: () {
@@ -112,7 +112,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     },
                   ),
                   const SizedBox(width: 20),
-                  CupertinoTextButton.materialIcon(
+                  CupertinoTextButton.icon(
                     icon: CupertinoIcons.add_circled,
                     size: 50,
                     onTap: () {

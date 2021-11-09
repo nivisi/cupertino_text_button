@@ -1,4 +1,4 @@
 enum CupertinoTextButtonType {
   text,
-  materialIcon,
+  icon,
 }

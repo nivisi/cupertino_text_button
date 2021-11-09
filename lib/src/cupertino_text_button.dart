@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import 'cupertino_text_button_theme.dart';
@@ -7,7 +8,7 @@ part 'util/helpers.dart';
 
 class CupertinoTextButton extends StatefulWidget {
   /// Is automatically determined by using either the default constructor,
-  /// or the [CupertinoTextButton.materialIcon] one.
+  /// or the [CupertinoTextButton.icon] one.
   final CupertinoTextButtonType type;
 
   /// The text to display.
@@ -59,13 +60,16 @@ class CupertinoTextButton extends StatefulWidget {
 
   /// The icon to display.
   ///
-  /// Is used in the [CupertinoTextButton.materialIcon] constructor that creates
+  /// Is used in the [CupertinoTextButton.icon] constructor that creates
   /// a button with icon.
-  final IconData? icon;
+  ///
+  /// To use [CupertinoIcons],
+  /// don't forget to add the [cupertino_icons] package to your pubspec.yaml.
+  final IconData? iconData;
 
   /// The size of the icon in logical pixels.
   ///
-  /// Is used in the [CupertinoTextButton.materialIcon] constructor that creates
+  /// Is used in the [CupertinoTextButton.icon] constructor that creates
   /// a button with icon.
   ///
   /// Icons occupy a square with width and height equal to size.
@@ -82,7 +86,7 @@ class CupertinoTextButton extends StatefulWidget {
 
   /// The text direction to use for rendering the icon.
   ///
-  /// Is used in the [CupertinoTextButton.materialIcon] constructor that creates
+  /// Is used in the [CupertinoTextButton.icon] constructor that creates
   /// a button with icon.
   ///
   /// If this is null, the ambient [Directionality] is used instead.
@@ -93,7 +97,7 @@ class CupertinoTextButton extends StatefulWidget {
   /// set to true, and the [Icon] widget uses the [textDirection] to determine
   /// the orientation in which to draw the icon.
   ///
-  /// This property has no effect if the [icon]'s [IconData.matchTextDirection]
+  /// This property has no effect if the [iconData]'s [IconData.matchTextDirection]
   /// field is false, but for consistency a text direction value must always be
   /// specified, either directly using this property or using [Directionality].
   final TextDirection? iconTextDirection;
@@ -152,15 +156,15 @@ class CupertinoTextButton extends StatefulWidget {
     this.backwardDuration,
     this.curve,
   })  : textStyle = style,
-        icon = null,
+        iconData = null,
         iconSize = null,
         iconTextDirection = null,
         type = CupertinoTextButtonType.text,
         super(key: key);
 
-  const CupertinoTextButton.materialIcon({
+  const CupertinoTextButton.icon({
     Key? key,
-    required this.icon,
+    required IconData icon,
     double? size,
     TextDirection? textDirection,
     this.onTap,
@@ -176,9 +180,10 @@ class CupertinoTextButton extends StatefulWidget {
         textDirection = null,
         textOverflow = null,
         softWrap = null,
+        iconData = icon,
         iconSize = size,
         iconTextDirection = textDirection,
-        type = CupertinoTextButtonType.materialIcon,
+        type = CupertinoTextButtonType.icon,
         super(key: key);
 
   @override
@@ -266,10 +271,10 @@ class _CupertinoTextButtonState extends State<CupertinoTextButton>
         };
 
         break;
-      case CupertinoTextButtonType.materialIcon:
+      case CupertinoTextButtonType.icon:
         builder = (_, __) {
           return Icon(
-            widget.icon!,
+            widget.iconData!,
             color: _animation.value,
             size: widget.iconSize,
             textDirection: widget.iconTextDirection,
