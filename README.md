@@ -1,10 +1,10 @@
-# Cupertino Text Button 
+# Cupertino Text Button [![pub version][pub-version-img]][pub-version-url]
 
-[![pub version][pub-version-img]][pub-version-url] [![CodeFactor][code-factor--badge-url]][code-factor-app-url]
+[![CodeFactor][code-factor--badge-url]][code-factor-app-url]
 
 A button that looks like a Cupertino text button!
 
-<img src="/readme/CupertinoTextButtonExample.gif">
+![example][gif-example]
 
 ### Text Button
 
@@ -36,7 +36,7 @@ For text buttons you can configure the following properties:
 A simple material icon button can be created like this:
 
 ```dart
-CupertinoTextButton.materialIcon(
+CupertinoTextButton.icon(
     icon: Icons.chevron_left,
     size: 30,
     onTap: () {
@@ -113,5 +113,6 @@ If these properties are not specified in the button and no theme is provided, fa
 
 [code-factor--badge-url]: https://www.codefactor.io/repository/github/nivisi/cupertino_text_button/badge?s=decf81989732c918fe71190d5afd2637c02e1816
 [code-factor-app-url]: https://www.codefactor.io/repository/github/nivisi/cupertino_text_button
-[pub-version-img]: https://img.shields.io/badge/pub-0.0.1-green
+[pub-version-img]: https://img.shields.io/badge/pub-0.0.2-green
 [pub-version-url]: https://pub.dev/packages/cupertino_text_button
+[gif-example]: https://github.com/nivisi/cupertino_text_button/raw/165889ca334700daa23698a6847fa6a312ba7a29/readme/CupertinoTextButtonExample.gif
