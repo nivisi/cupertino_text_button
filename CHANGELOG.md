@@ -1,3 +1,7 @@
+## 0.0.4
+
+* Added padding property
+
 ## 0.0.3
 
 * Breaking: Rename the normalColor property to color
