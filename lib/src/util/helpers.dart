@@ -12,7 +12,7 @@ Color _getColor(CupertinoTextButton widget, BuildContext context) {
 }
 
 Color _getPressedColor(CupertinoTextButton widget, BuildContext context) {
-  final widgetPressedColor = widget.color;
+  final widgetPressedColor = widget.pressedColor;
   if (widgetPressedColor != null) {
     return widgetPressedColor;
   }
