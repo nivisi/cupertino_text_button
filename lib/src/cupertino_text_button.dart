@@ -140,6 +140,9 @@ class CupertinoTextButton extends StatefulWidget {
   /// [kCupertinoTextButtonDefaultAnimationCurve] is used.
   final Curve? curve;
 
+  /// Padding that will be applied to the text/icon.
+  final EdgeInsets padding;
+
   const CupertinoTextButton({
     Key? key,
     required this.text,
@@ -155,6 +158,7 @@ class CupertinoTextButton extends StatefulWidget {
     this.forwardDuration,
     this.backwardDuration,
     this.curve,
+    this.padding = EdgeInsets.zero,
   })  : textStyle = style,
         iconData = null,
         iconSize = null,
@@ -174,6 +178,7 @@ class CupertinoTextButton extends StatefulWidget {
     this.forwardDuration,
     this.backwardDuration,
     this.curve,
+    this.padding = EdgeInsets.zero,
   })  : text = null,
         textStyle = null,
         textAlign = null,
@@ -324,9 +329,12 @@ class _CupertinoTextButtonState extends State<CupertinoTextButton>
               );
             }
           : null,
-      child: AnimatedBuilder(
-        animation: _animationController,
-        builder: builder,
+      child: Padding(
+        padding: widget.padding,
+        child: AnimatedBuilder(
+          animation: _animationController,
+          builder: builder,
+        ),
       ),
     );
   }
