@@ -61,10 +61,10 @@ Either you creating a text or an icon button, you can specify these properties:
 | ------------- | ------------- | ------------- |
 | onTap  | Function | On tap handler of the button |
 | onLongPress  | Function | On long press handler of the button |
-| normalColor  | Color | Foreground color of the button in normal state, e.g. not pressed |
+| color  | Color | Foreground color of the button in normal state, e.g. not pressed |
 | pressedColor  | Color | Foreground color of the button in pressed state |
-| forwardDuration  | Duration | Duration of the animation from normalColor to pressedColor |
-| backwardDuration  | Duration | Duration of the animation back from pressedColor to normalColor |
+| forwardDuration  | Duration | Duration of the animation from color to pressedColor |
+| backwardDuration  | Duration | Duration of the animation back from pressedColor to color |
 | curve  | Curve | The animation curve. |
 
 ### Theme
@@ -73,7 +73,7 @@ All these shared properties, except for the `onTap` and `onLongPress` ones, can 
 
 ```dart
 CupertinoTextButtonTheme(
-    normalColor: Colors.white,
+    color: Colors.white,
     pressedColor: Colors.orange,
     /* forwardDuration, backwardDuration and curve can also be configured here. */
     child: Row(
@@ -103,7 +103,7 @@ If these properties are not specified in the button and no theme is provided, fa
 
 | Property | Fallback Value |
 | ------------- | ------------- |
-| normalColor  | Colors.black |
+| color  | Colors.black |
 | pressedColor  | Theme*.primaryColor |
 | forwardDuration  | const Duration(milliseconds: 20) |
 | backwardDuration  | const Duration(milliseconds: 200) |

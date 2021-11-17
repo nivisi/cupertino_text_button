@@ -1,9 +1,9 @@
 part of '../cupertino_text_button.dart';
 
-Color _getNormalColor(CupertinoTextButton widget, BuildContext context) {
-  final widgetNormalColor = widget.normalColor;
-  if (widgetNormalColor != null) {
-    return widgetNormalColor;
+Color _getColor(CupertinoTextButton widget, BuildContext context) {
+  final widgetColor = widget.color;
+  if (widgetColor != null) {
+    return widgetColor;
   }
 
   final cupertinoTextButtonTheme = CupertinoTextButtonTheme.of(context);
@@ -12,7 +12,7 @@ Color _getNormalColor(CupertinoTextButton widget, BuildContext context) {
 }
 
 Color _getPressedColor(CupertinoTextButton widget, BuildContext context) {
-  final widgetPressedColor = widget.normalColor;
+  final widgetPressedColor = widget.color;
   if (widgetPressedColor != null) {
     return widgetPressedColor;
   }

@@ -67,7 +67,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 style: const TextStyle(fontSize: 17),
               ),
               CupertinoTextButton(
-                normalColor: Colors.purple,
+                color: Colors.purple,
                 pressedColor: Colors.orange,
                 text: 'You pressed this button $_withoutThemeCounter times',
                 style: const TextStyle(fontSize: 20),
