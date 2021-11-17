@@ -329,8 +329,9 @@ class _CupertinoTextButtonState extends State<CupertinoTextButton>
               );
             }
           : null,
-      child: Padding(
+      child: Container(
         padding: widget.padding,
+        color: Colors.transparent,
         child: AnimatedBuilder(
           animation: _animationController,
           builder: builder,

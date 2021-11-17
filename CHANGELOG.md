@@ -1,3 +1,7 @@
+## 0.0.5
+
+* Fixed: EdgeInsets area was not clickable
+
 ## 0.0.4
 
 * Added padding property
