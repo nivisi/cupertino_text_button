@@ -1,3 +1,8 @@
+## 0.0.3
+
+* Breaking: Rename the normalColor property to color
+* Fixed: pressedColor is now used correctly
+
 ## 0.0.2
 
 * Breaking: Rename the materialIcon constructor to icon

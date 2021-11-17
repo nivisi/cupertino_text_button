@@ -107,10 +107,10 @@ class CupertinoTextButton extends StatefulWidget {
 
   /// Foreground color of the button in normal state, e.g. not pressed.
   ///
-  /// If not specified, the [normalColor] from the [CupertinoTextButtonTheme] is used.
+  /// If not specified, the [color] from the [CupertinoTextButtonTheme] is used.
   /// If it is not specified in [CupertinoTextButtonTheme],
   /// the [Colors.black] is used.
-  final Color? normalColor;
+  final Color? color;
 
   /// Foreground color of the button in pressed state.
   ///
@@ -150,7 +150,7 @@ class CupertinoTextButton extends StatefulWidget {
     this.softWrap = true,
     this.onTap,
     this.onLongPress,
-    this.normalColor,
+    this.color,
     this.pressedColor,
     this.forwardDuration,
     this.backwardDuration,
@@ -169,7 +169,7 @@ class CupertinoTextButton extends StatefulWidget {
     TextDirection? textDirection,
     this.onTap,
     this.onLongPress,
-    this.normalColor,
+    this.color,
     this.pressedColor,
     this.forwardDuration,
     this.backwardDuration,
@@ -215,8 +215,8 @@ class _CupertinoTextButtonState extends State<CupertinoTextButton>
   void didUpdateWidget(covariant CupertinoTextButton oldWidget) {
     super.didUpdateWidget(oldWidget);
 
-    if (widget.normalColor != oldWidget.normalColor) {
-      _colorTween.begin = _getNormalColor(widget, context);
+    if (widget.color != oldWidget.color) {
+      _colorTween.begin = _getColor(widget, context);
     }
 
     if (widget.pressedColor != oldWidget.pressedColor) {
@@ -242,7 +242,7 @@ class _CupertinoTextButtonState extends State<CupertinoTextButton>
   void didChangeDependencies() {
     super.didChangeDependencies();
 
-    _colorTween.begin = _getNormalColor(widget, context);
+    _colorTween.begin = _getColor(widget, context);
     _colorTween.end = _getPressedColor(widget, context);
     _forwardDuration = _getForwardDuration(widget, context);
     _backwardDuration = _getBackwardDuration(widget, context);
